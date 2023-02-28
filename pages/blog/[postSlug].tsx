@@ -48,11 +48,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const post = fetchPost({ slug });
 
   if (post?.published !== true) {
-    console.log(`Page with slug: ${slug} not found`);
+    console.log(
+      new Date().toTimeString(),
+      `Page with slug "${slug}" not found`
+    );
 
     return {
       notFound: true,
-      revalidate: 4, // Remember this value to spot when Response Headers change from "[...] Cache-Control: s-maxage=5..." to "[...] Cache-Control: s-maxage=4..."
+      revalidate: 5,
     };
   }
 

@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </nav>
       <p>
         If <b>minutes</b> are <b>even</b> (e.g. 08:10, 08:12). Post Page should
-        return <b>404</b>
+        return <b>404 Page</b>, but returns it self.
       </p>
       <Component {...pageProps} />
     </div>
