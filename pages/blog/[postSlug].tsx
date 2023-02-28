@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     return {
       notFound: true,
-      revalidate: 5,
+      revalidate: 4, // Remember this value to spot when Response Headers change from "[...] Cache-Control: s-maxage=5..." to "[...] Cache-Control: s-maxage=4..."
     };
   }
 
